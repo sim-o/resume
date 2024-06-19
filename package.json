@@ -31,6 +31,8 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "@react-pdf/renderer": "^3.4.4",
+    "commander": "^2.20.0",
+    "react": "^18.3.1"
   }
 }
