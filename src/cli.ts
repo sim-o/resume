@@ -1,20 +1,18 @@
 #!/usr/bin/env node
 
-import program from 'commander'
+import { Command  } from 'commander';
+import { render } from './index';
 
-import { orderPizza } from './index'
- 
-program
+const program = new Command()
   .version('0.1.0')
-  .option('-p, --peppers', 'Add peppers')
-  .option('-P, --pineapple', 'Add pineapple')
-  .option('-b, --bbq-sauce', 'Add bbq sauce')
-  .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')
-  .parse(process.argv)
+  .option('-r, --resume <file>', 'Set resume file', 'resume.yaml')
+  .option('-o, --output-file <file>', 'Set output file', 'resume.pdf');
 
-orderPizza({
-  peppers: program.peppers,
-  pineapple: program.pineapple,
-  bbqSauce: program.bbqSauce,
-  cheeseType: program.cheese
-}).then(result => console.log(result.message))
+program.parse();
+const options = program.opts();
+render(
+      options.resume,
+      options.outputFile
+    ).then(() => {
+      console.log('Completed.');
+    });
