@@ -69,7 +69,7 @@ work:
 
   - company: RSVP.com.au
     position: Senior Developer
-    location: Surry Hills, NSW
+    location: Sydney
     startDate: "2008-10-01"
     endDate: "2017-03-01"
     summary: |
@@ -77,7 +77,7 @@ work:
 
   - company: Business Information Services
     position: Web Developer
-    location: Bondi Junction, NSW
+    location: Sydney
     startDate: "2006-03-01"
     endDate: "2008-10-01"
     summary: Responsible for requirements gathering, implementation, and testing of key company projects.
@@ -152,9 +152,9 @@ skillGroups:
   - name: CI/CD
     skills:
       - name: Gitlab
-        level: Expert
+        level: Advanced
       - name: Azure Pipelines
-        level: Expert
+        level: Advanced
       - name: DevOps
-        level: Expert
+        level: Advanced
 
