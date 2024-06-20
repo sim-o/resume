@@ -4,6 +4,11 @@
     "outDir": "dist",
     "module": "commonjs",
     "target": "es6",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
   }
 }
