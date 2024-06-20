@@ -15,8 +15,8 @@ export function Resume({ data }: Props) {
             <Image style={styles.portraitImage} src={data.basics.picture} />
           </View>
           <View style={styles.headerTitle}>
-            <Text style={styles.name}>{data.basics.name}</Text>
-            <Text style={styles.label}>{data.basics.label}</Text>
+            <View><Text style={styles.name}>{data.basics.name}</Text></View>
+            <View><Text style={styles.label}>{data.basics.label}</Text></View>
           </View>
           <View style={styles.headerInfo}>
             <Text>{data.basics.phone}</Text>
@@ -56,14 +56,19 @@ export function Resume({ data }: Props) {
           </View>
           <View style={styles.mainColumn}>
             <View style={styles.workList}>
-              <Text style={styles.columnTitle}>Work</Text>
+              <Text style={styles.columnTitle}>Work history</Text>
               {data.work.map((w, i) => (
                 <View key={i} style={styles.section}>
-                  <View style={styles.sectionTitle} wrap={false}>
-                    <Text style={styles.sectionTitleMain}>{w.company}</Text>
-                    <Text style={styles.sectionDate}>{month(w.startDate)} - {month(w.endDate)}</Text>
+                  <View wrap={false}>
+                    <View style={styles.sectionTitle} wrap={false}>
+                      <Text style={styles.sectionTitleMain}>{w.company}</Text>
+                      <Text style={styles.sectionDate}>{month(w.startDate)} - {month(w.endDate)}</Text>
+                    </View>
+                    <View style={styles.sectionSubtitle}>
+                      <View style={styles.position}><Text>{w.position}</Text></View>
+                      <View style={styles.location}><Text>{w.location}</Text></View>
+                    </View>
                   </View>
-                  <View style={styles.location}><Text>{w.location}</Text></View>
                   <View style={styles.summary}><Text>{w.summary}</Text></View>
                   {w.highlights && (
                     <View style={styles.highlights}>
