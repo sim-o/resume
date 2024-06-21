@@ -4,38 +4,41 @@ import {Font, StyleSheet} from '@react-pdf/renderer';
 Font.registerHyphenationCallback((w) => [w]);
 
 // register fonts
-Font.register({ family: 'Roboto', src: 'Roboto-Regular.ttf' });
+Font.register({ family: 'Lato', src: 'Lato-Regular.ttf', fontWeight: 'normal' });
+Font.register({ family: 'Lato', src: 'Lato-Light.ttf', fontWeight: 'light' });
+Font.register({ family: 'Lato', src: 'Lato-Thin.ttf', fontWeight: 'thin' });
 Font.register({ family: 'Poppins', src: 'Poppins-Regular.ttf'});
 
+const mainTextColor = '#39424B';
 
 export const styles = StyleSheet.create({
 	page: {
 		backgroundColor: 'white',
-		fontFamily: 'Roboto',
+		fontFamily: 'Lato',
 		fontSize: 10,
 		padding: 20,
-		color: '#644454',
+		color: mainTextColor,
 	},
 	header: {
 	  flexDirection: 'row',
-		backgroundColor: '#e8ecf1',
+		backgroundColor: '#F8CAB9',
 		fontFamily: 'Poppins',
 		margin: 10,
-		borderRadius: 4,
 		overflow: 'hidden',
 	},
 	portrait: {
-		aspectRatio: 1,
-		flex: 1,
-		alignItems: 'center',
-		paddingRight: 21,
+		flex: 1.6,
+		alignItems: 'flex-start',
+		justifyContent: 'flex-end',
+		paddingRight: 50,
 	},
 	portraitImage: {
 		aspectRatio: 1,
+		maxHeight: 80,
 	},
 	headerTitle: {
 		flexDirection: 'column',
-		flex: 3,
+		flex: 4,
 		margin: 12,
 		marginLeft: 0,
 	},
@@ -43,15 +46,16 @@ export const styles = StyleSheet.create({
 		fontSize: 18,
 	},
 	label: {
-		color: '#888888',
+		marginTop: -4,
+		color: '#90867f',
 	},
 	headerInfo: {
-		flex: 1,
+		flex: 2,
 		textAlign: 'right',
 		margin: 12,
   },
 	basicSummary: {
-		margin: 10,
+		marginBottom: 14,
 	},
 	main: {
 		flexDirection: 'row',
@@ -59,23 +63,33 @@ export const styles = StyleSheet.create({
 	},
 	mainColumn: {
 		flexDirection: 'column',
-		flex: 4,
+		flex: 6,
 	},
 	columnTitle: {
-		fontSize: 16,
+		fontSize: 12,
+		flexDirection: 'column',
+		fontWeight: 'light',
+	},
+	columnTitleUnderline: {
+		height: 0.5,
+		width: 40,
+		backgroundColor: mainTextColor,
+		marginTop: 6,
+		marginBottom: 12,
 	},
 	
 	skills: {
-		flex: 1,
-		paddingRight: 12,
+		flex: 1.6,
+		paddingRight: 40,
 	},
 	skillGroup: {
-		marginBottom: 12,
+		marginBottom: 16,
 		fontSize: 10,
 	},
 	skill: {
-		fontSize: 8,
+		fontSize: 10,
 		flexDirection: 'row',
+		marginBottom: 2,
 	},
 	skillName: { flex: 1},
 	skillPips: { flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginLeft: 8 },
@@ -122,5 +136,11 @@ export const styles = StyleSheet.create({
 		color: '#888888',
 		alignItems: 'flex-end',
 	},
+
+	link: {color: mainTextColor},
+
+	dotContainer: {flexDirection: 'row', marginLeft: 8, marginTop: 2},
+	dot: {marginRight: 2},
+	dotText: {},
 });
 

@@ -136,7 +136,7 @@ skillGroups:
       - name: RabbitMQ
         level: Advanced
       - name: Kafka
-        level: Advanced
+        level: Intermediate
   - name: Cloud
     skills:
       - name: Kubernetes
