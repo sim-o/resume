@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		fontFamily: 'Lato',
 		fontSize: 9,
-		padding: 20,
+		padding: 30,
 		color: mainTextColor,
 	},
 	header: {
