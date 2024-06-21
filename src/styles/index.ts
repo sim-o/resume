@@ -134,6 +134,7 @@ export const styles = StyleSheet.create({
 		fontSize: 10,
 		color: '#888888',
 		alignItems: 'flex-end',
+		paddingBottom: 1
 	},
 
 	link: {color: mainTextColor},
