@@ -29,4 +29,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run dev
-    - run: gh release create --title "$(date --rfc-3339=s)" --generate-notes "$(date --rfc-3339=s | tr ' :' 'T.')" resume.pdf
+    - run: gh release create --title "$(TZ=Australia/Sydney date --rfc-3339=s)" --generate-notes "$(date --rfc-3339=s | tr ' :' 'T.')" resume.pdf
