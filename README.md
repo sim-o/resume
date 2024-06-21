@@ -1,58 +1,11 @@
-# typescript-cli-starter
+# About
 
-A simple and zero-opinion typescript starter template for building cross-platform command line applications.
+This resume started it's life as a [JSON Resume](http://jsonresume.org) yaml file, so the structure of the resume.yaml file resembles that which JSON Resume uses. I had problems with the rendering of that, however, so instead of modifying the template I was using, I entirely rewrote this using [React PDF](https://react-pdf.org/). Overkill?
 
-![GitHub package.json dynamic](https://img.shields.io/github/package-json/keywords/khalidx/typescript-cli-starter.svg?style=flat-square)
+Anyway, that means the resume.yaml here closely resembles that of JSON Resume, with exceptions particularly around the `skills` list.
 
-![GitHub](https://img.shields.io/github/license/khalidx/typescript-cli-starter.svg?style=flat-square)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/khalidx/typescript-cli-starter.svg?style=flat-square)
-![GitHub top language](https://img.shields.io/github/languages/top/khalidx/typescript-cli-starter.svg?style=flat-square)
+# Usage
 
-![GitHub last commit](https://img.shields.io/github/last-commit/khalidx/typescript-cli-starter.svg?style=flat-square)
+Changes to any of the files here will be rendered by a Github action when pushed and stored as a release.
 
-Includes:
-
-- [TypeScript](https://www.typescriptlang.org/), for writing good code
-- [Ava](https://www.npmjs.com/package/ava), for writing good tests
-- [Commander](https://www.npmjs.com/package/commander), for building CLI applications
-- [Pkg](https://www.npmjs.com/package/pkg), for building cross-platform native executables
-
-Your application will be installable from `npm` or by sharing your native executables.
-
-## Usage
-
-### **dev**
-
-`npm run dev`
-
-Runs the CLI application.
-
-You can pass arguments to your application by running `npm run dev -- --your-argument`. The extra `--` is so that your arguments are passed to your CLI application, and not `npm`.
-
-### **clean**
-
-`npm run clean`
-
-Removes any built code and any built executables.
-
-### **build**
-
-`npm run build`
-
-Cleans, then builds the TypeScript code.
-
-Your built code will be in the `./dist/` directory.
-
-### **test**
-
-`npm run test`
-
-Cleans, then builds, and tests the built code.
-
-### **bundle**
-
-`npm run bundle`
-
-Cleans, then builds, then bundles into native executables for Windows, Mac, and Linux.
-
-Your shareable executables will be in the `./exec/` directory.
+You can of course render locally using `npm run dev`, after having run `npm install`.
