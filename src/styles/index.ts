@@ -91,8 +91,8 @@ export const styles = StyleSheet.create({
 	},
 	skillName: { flex: 1},
 	skillPips: { flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', marginLeft: 8 },
-	pipOn: { height: 4, width: 6, backgroundColor: 'black', border: '1px solid black', marginRight: 1},
-	pipOff: {height: 4, width: 6, border: '1px solid black', marginRight: 1},
+	pipOn: { height: 4, width: 6, backgroundColor: `${mainTextColor}`, border: `1px solid ${mainTextColor}`, marginRight: 1},
+	pipOff: {height: 4, width: 6, border: `1px solid ${mainTextColor}`, marginRight: 1},
 	
 	workList: {
 		flexDirection: 'column',
