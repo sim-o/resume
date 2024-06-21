@@ -8,7 +8,7 @@ import { Heading } from './heading';
 type Props = {education: model.Education[]};
 export function Education({ education }: Props) {
   return (
-    <View>
+    <View style={styles.workList}>
       <Heading>Education</Heading>
       {education.map((e, i) => (
         <View key={i} style={styles.section}>

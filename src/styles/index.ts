@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
 	page: {
 		backgroundColor: 'white',
 		fontFamily: 'Lato',
-		fontSize: 10,
+		fontSize: 9,
 		padding: 20,
 		color: mainTextColor,
 	},
@@ -75,7 +75,7 @@ export const styles = StyleSheet.create({
 		width: 40,
 		backgroundColor: mainTextColor,
 		marginTop: 6,
-		marginBottom: 12,
+		marginBottom: 8,
 	},
 	
 	skills: {
@@ -84,10 +84,8 @@ export const styles = StyleSheet.create({
 	},
 	skillGroup: {
 		marginBottom: 16,
-		fontSize: 10,
 	},
 	skill: {
-		fontSize: 10,
 		flexDirection: 'row',
 		marginBottom: 2,
 	},
@@ -97,7 +95,8 @@ export const styles = StyleSheet.create({
 	pipOff: {height: 4, width: 6, border: '1px solid black', marginRight: 1},
 	
 	workList: {
-		flexDirection: 'column'
+		flexDirection: 'column',
+		marginTop: 8,
 	},
 	position: {
 		fontSize: 10,
