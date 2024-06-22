@@ -5,7 +5,7 @@ import { styles } from '../styles';
 import { month } from '../utils';
 import { Heading } from './heading';
 
-type Props = {education: model.Education[]};
+type Props = { education: model.Education[] };
 export function Education({ education }: Props) {
   return (
     <View style={styles.workList}>
@@ -14,9 +14,13 @@ export function Education({ education }: Props) {
         <View key={i} style={styles.section}>
           <View style={styles.sectionTitle}>
             <Text style={styles.sectionTitleMain}>{e.institution}</Text>
-            <Text style={styles.sectionDate}>{month(e.startDate)} - {month(e.endDate)}</Text>
+            <Text style={styles.sectionDate}>
+              {month(e.startDate)} - {month(e.endDate)}
+            </Text>
           </View>
-          <Text>{e.studyType} of {e.area}</Text>
+          <Text>
+            {e.studyType} of {e.area}
+          </Text>
         </View>
       ))}
     </View>

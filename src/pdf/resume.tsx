@@ -13,7 +13,7 @@ export function Resume({ data }: Props) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Header basics={data.basics}/>
+        <Header basics={data.basics} />
         <View style={styles.main}>
           <SkillGroups skillGroups={data.skillGroups} />
           <View style={styles.mainColumn}>
@@ -22,9 +22,7 @@ export function Resume({ data }: Props) {
               <Text>{data.basics.summary}</Text>
             </View>
             <WorkList work={data.work} />
-            {data.education && (
-              <Education education={data.education}/>
-            )}
+            {data.education && <Education education={data.education} />}
           </View>
         </View>
       </Page>

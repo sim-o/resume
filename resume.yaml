@@ -7,7 +7,7 @@ basics:
   summary: I am a full stack developer and consultant with more than 18 years of experience across a varied range of technologies. I’ve had the pleasure to be part of solving business challenges and generating revenue for several industries such as property, health, online dating, and accounting. I am experienced in agile ways of working including Extreme Programming (XP) and Scrum, combined with a dev-ops model. As well as delivering successful products, I am experienced at coaching and leading teams of software engineers.
   location:
     city: Glebe
-    postalCode: "2037"
+    postalCode: '2037'
     region: NSW
   profiles:
     - network: LinkedIn
@@ -15,8 +15,8 @@ basics:
       icon: linkedin.png
 
 education:
-  - startDate: "2003-02-01"
-    endDate: "2006-03-01"
+  - startDate: '2003-02-01'
+    endDate: '2006-03-01'
     area: Computer Science
     studyType: Bachelor
     institution: University of Wollongong
@@ -25,13 +25,13 @@ work:
   - company: VMware Tanzu Labs
     position: Senior Software Engineer
     location: Sydney
-    startDate: "2021-11-30"
-    endDate: "2024-07-08"
+    startDate: '2021-11-30'
+    endDate: '2024-07-08'
     summary: |
       Tanzu Labs is a consultancy that embeds in customer businesses and builds teams within the client organisation around XP, pair programming, and TDD. This is a unique structure whereby we not only deliver products for customers, but do it alongside existing or new client teams and coach them in effective agile practices while building their product and team simultaneously.
-      
+
       I worked with a client on several streams in an effort to modernise a legacy application suite, starting three from scratch. We helped them grow from a team with only a few engineers to a team of over 20 while modernising their existing internal booking system and updating their development processes from bureaucracy heavy, high defect, and IT driven to business driven agile process with a rapid turnaround from backlog to release and low defect rate.
-      
+
       Some highlights are:
     highlights:
       - I led engineering on 3 streams of work and contributed to two others
@@ -50,8 +50,8 @@ work:
   - company: Corelogic
     position: Senior Software Engineer
     location: Sydney
-    startDate: "2017-04-01"
-    endDate: "2021-11-15"
+    startDate: '2017-04-01'
+    endDate: '2021-11-15'
     summary: |
       Corelogic offers market property valuations and tracking but also develops specific real estate valuation systems for major real estate market stakeholders. Software support and design is key to decision making information, macro and micro economic policies and domestic customers information. Systems and tools need to be accurate, timely and responsive to changing information demands. In this context, my role was to develop products from the front end, back ends, and APIs, estimating projects, and delivering reliable systems in tight deadlines. I was responsible for building and maintaining products and helping the team produce quality, reliable code. I’ve worked in large and small teams building React mobile apps and websites, and Spring Boot based API services. Highlights include:
     highlights:
@@ -62,7 +62,7 @@ work:
       - Built an API product to manage the process of ordering valuations and managing them as they progress through various internal and external systems
       - Built various microservices that collect and provide access to property data
       - Worked with offshore teams in the Philippines on greenfield projects and handed over products that had reached maturity
-      - Provided engineering expertise to product managers and designers to find appropriate solutions 
+      - Provided engineering expertise to product managers and designers to find appropriate solutions
       - Used my expertise to coach team members through a combination of pair programming, code reviews, and one on one mentoring discussions
       - Using observability tools such as Splunk and tracing tools to understand and resolve issues affecting production
       - Optimised the performance of all systems from the client application to the server and database
@@ -70,16 +70,16 @@ work:
   - company: RSVP.com.au
     position: Senior Developer
     location: Sydney
-    startDate: "2008-10-01"
-    endDate: "2017-03-01"
+    startDate: '2008-10-01'
+    endDate: '2017-03-01'
     summary: |
       Worked on a team of 5 developers in a business of around 20 people building and maintaining a dating website built on Spring, Struts, JSP, and using JQuery for light interactivity on the front end. At the time, RSVP was the largest dating site in the country. Due to high traffic with 20 - 60k nightly users, work was often focused on performance and reliability under heavy load. In this role I built new features, worked with the product team to propose solutions and testers to validate and improve them, and maintained an aging code base. I also helped train team members in our code base and in growing their skill as effective developers capable of building solid, reliable, and performant code.
 
   - company: Business Information Services
     position: Web Developer
     location: Sydney
-    startDate: "2006-03-01"
-    endDate: "2008-10-01"
+    startDate: '2006-03-01'
+    endDate: '2008-10-01'
     summary: Responsible for requirements gathering, implementation, and testing of key company projects.
     highlights:
       - Maintained and enhanced ICMS, a corporate credit card and expense management software, in regular contact with client services team to gather client requirements and scope
@@ -157,4 +157,3 @@ skillGroups:
         level: Advanced
       - name: DevOps
         level: Advanced
-

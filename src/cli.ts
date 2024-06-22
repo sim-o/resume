@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { Command  } from 'commander';
+import { Command } from 'commander';
 import { render } from './index';
 
 const program = new Command()
@@ -10,9 +10,6 @@ const program = new Command()
 
 program.parse();
 const options = program.opts();
-render(
-      options.resume,
-      options.outputFile
-    ).then(() => {
-      console.log('Completed.');
-    });
+render(options.resume, options.outputFile).then(() => {
+  console.log('Completed.');
+});

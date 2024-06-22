@@ -12,8 +12,12 @@ export function Header({ basics }: Props) {
         <Image style={styles.portraitImage} src={basics.picture} />
       </View>
       <View style={styles.headerTitle}>
-        <View><Text style={styles.name}>{basics.name}</Text></View>
-        <View><Text style={styles.label}>{basics.label}</Text></View>
+        <View>
+          <Text style={styles.name}>{basics.name}</Text>
+        </View>
+        <View>
+          <Text style={styles.label}>{basics.label}</Text>
+        </View>
       </View>
       <View style={styles.headerInfo}>
         <Text>{basics.phone}</Text>
@@ -22,8 +26,24 @@ export function Header({ basics }: Props) {
         </Link>
         <Location location={basics.location} />
         {basics.profiles.map((p, i) => (
-          <Link key={i} href={p.url} style={[styles.link, { flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end' }]}>
-            {p.icon && <Image src={p.icon} style={{ height: 10, aspectRatio: 1, marginRight: 4 }} />}
+          <Link
+            key={i}
+            href={p.url}
+            style={[
+              styles.link,
+              {
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'flex-end',
+              },
+            ]}
+          >
+            {p.icon && (
+              <Image
+                src={p.icon}
+                style={{ height: 10, aspectRatio: 1, marginRight: 4 }}
+              />
+            )}
             <Text>{p.network}</Text>
           </Link>
         ))}

@@ -1,13 +1,22 @@
 const dateRegexp = /^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})$/;
 
 const months = [
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ];
 
 export function month(date: string) {
-  return date.replace(
-    dateRegexp,
-    (...g) => `${months[g[2] - 1]} ${g[1]}`);
+  return date.replace(dateRegexp, (...g) => `${months[g[2] - 1]} ${g[1]}`);
 }
 
 const skillNumbers = {
