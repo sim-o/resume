@@ -4,7 +4,7 @@ import fs from 'fs';
 import { parse } from 'yaml';
 import * as model from './model';
 import { Resume } from './pdf/resume';
-import { evaluateConditionals } from './removeConditionals';
+import { evaluateConditionals } from './evaluateConditionals';
 
 export const render = async (resumeFile: string, outputFile: string) => {
   const readPromise = new Promise<string>((s, f) => {
