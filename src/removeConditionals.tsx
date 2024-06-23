@@ -1,9 +1,17 @@
-export function removeConditionals<T>(o: T): T | undefined {
+/**
+ * Finds objects with a `$when` property and evaluates them. If true, returns the object excluding the `$when` property,
+ * otherwise the object is removed from the tree. If there is a `$value` property it is returned instead of the
+ * current object.
+ *
+ * This descends recursively through the entire object tree, including arrays. If there are cycles it will stack
+ * overflow.
+ */
+export function evaluateConditionals<T>(o: T): T | undefined {
   if (typeof o !== 'object' || o == null) {
     return o;
   }
   if (o instanceof Array) {
-    const cleaned = o.map(removeConditionals).filter((i) => i !== undefined);
+    const cleaned = o.map(evaluateConditionals).filter((i) => i !== undefined);
     return cleaned.length ? (cleaned as T) : undefined;
   }
 
@@ -15,13 +23,13 @@ export function removeConditionals<T>(o: T): T | undefined {
   }
 
   if ('$value' in o) {
-    return removeConditionals(o.$value) as T;
+    return evaluateConditionals(o.$value) as T;
   }
 
   return Object.fromEntries(
     Object.entries(o)
       .filter(([k]) => k !== 'when')
-      .map(([k, v]) => [k, removeConditionals(v)])
+      .map(([k, v]) => [k, evaluateConditionals(v)])
       .filter(([, v]) => v !== undefined)
   ) as T;
 }
