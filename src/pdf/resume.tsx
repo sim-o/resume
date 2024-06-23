@@ -7,6 +7,7 @@ import { WorkList } from './workList';
 import { Header } from './header';
 import { Education } from './education';
 import { Heading } from './heading';
+import { Certificates } from './certificates';
 
 type Props = { data: model.Resume };
 export function Resume({ data }: Props) {
@@ -23,6 +24,7 @@ export function Resume({ data }: Props) {
             </View>
             <WorkList work={data.work} />
             {data.education && <Education education={data.education} />}
+            {data.certificates && <Certificates certificates={data.certificates} />}
           </View>
         </View>
       </Page>

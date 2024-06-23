@@ -44,6 +44,11 @@ export type Skill = {
   level: 'Expert' | 'Advanced';
 };
 
+export type Certificate = {
+  name: string;
+  date: string;
+};
+
 export type SkillGroup = {
   name: string;
   skills: Skill[];
@@ -52,6 +57,7 @@ export type SkillGroup = {
 export type Resume = {
   basics: Basics;
   education: Education[];
+  certificates: Certificate[];
   work: Work[];
   skillGroups: SkillGroup[];
 };

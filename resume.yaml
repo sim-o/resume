@@ -14,13 +14,6 @@ basics:
       url: https://www.linkedin.com/in/simon-kerle-70544a9/
       icon: linkedin.png
 
-education:
-  - startDate: '2003-02-01'
-    endDate: '2006-03-01'
-    area: Computer Science
-    studyType: Bachelor
-    institution: University of Wollongong
-
 work:
   - company: VMware Tanzu Labs
     position: Senior Software Engineer
@@ -58,7 +51,8 @@ work:
       - Fast tracked in a few months a React Native app for a large bank client, that had close to full test coverage and no major issues on release
       - Built a product producing generic and ad-hoc reports for Real Estate agents to use when talking with either buyers or sellers
       - Built a product that produced valuation reports for residential properties
-      # - Built an application that acted as a front end to bigquery and tableau reporting for customers to visualise Corelogic data
+      - $value: Built an application that acted as a front end to bigquery and tableau reporting for customers to visualise Corelogic data
+        $when: false
       - Built an API product to manage the process of ordering valuations and managing them as they progress through various internal and external systems
       - Built various microservices that collect and provide access to property data
       - Worked with offshore teams in the Philippines on greenfield projects and handed over products that had reached maturity
@@ -86,6 +80,18 @@ work:
       - Implementations of client specific general ledger export plugins
       - Mentored new development staff
       - Administered and maintained office Linux servers
+
+education:
+  - startDate: '2003-02-01'
+    endDate: '2006-03-01'
+    area: Computer Science
+    studyType: Bachelor
+    institution: University of Wollongong
+
+certificates:
+  - name: Spring Certified Professional 2024
+    date: 2024-02-06
+    $when: env.SPRING
 
 skillGroups:
   - name: Java

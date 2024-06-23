@@ -4,11 +4,13 @@ import fs from 'fs';
 import { parse } from 'yaml';
 import * as model from './model';
 import { Resume } from './pdf/resume';
+import { removeConditionals } from './removeConditionals';
 
 export const render = async (resumeFile: string, outputFile: string) => {
   const readPromise = new Promise<string>((s, f) => {
     fs.readFile(resumeFile, (err, data) => (err ? f(err) : s(data.toString())));
   });
   const yaml: model.Resume = parse(await readPromise);
-  await ReactPDF.renderToFile(<Resume data={yaml} />, outputFile);
+  const clean = removeConditionals(yaml)!;
+  await ReactPDF.renderToFile(<Resume data={clean} />, outputFile);
 };
