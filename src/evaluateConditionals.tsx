@@ -1,4 +1,12 @@
 /**
+ * This function evaulates the expression using the Function constructor. This is effectively an eval statement.
+ * Don't use this in production with untrusted user data!
+ */
+function evaluate(when: string): boolean {
+  return !!new Function('env', `return (${when});`)(process.env);
+}
+
+/**
  * Finds objects with a `$when` property and evaluates them. If true, returns the object excluding the `$when` property,
  * otherwise the object is removed from the tree. If there is a `$value` property it is returned instead of the
  * current object.
@@ -17,7 +25,7 @@ export function evaluateConditionals<T>(o: T): T | undefined {
 
   if ('$when' in o) {
     if (typeof o.$when === 'string') {
-      const when = new Function('env', `return (${o.$when})`)(process.env);
+      const when = evaluate(o.$when);
       if (!when) return undefined;
     } else if (!o.$when) return undefined;
   }
