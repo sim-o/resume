@@ -9,8 +9,7 @@
     "!dist/**/*.test.js"
   ],
   "scripts": {
-    "dev": "ts-node ./src/cli.ts",
-    "clean": "rimraf ./dist/ ./exec/"
+    "dev": "ts-node ./src/cli.ts"
   },
   "devDependencies": {
     "rimraf": "^5.0.7",
