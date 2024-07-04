@@ -36,7 +36,7 @@ export function evaluateConditionals<T>(o: T): T | undefined {
 
   return Object.fromEntries(
     Object.entries(o)
-      .filter(([k]) => k !== 'when')
+      .filter(([k]) => k !== '$when')
       .map(([k, v]) => [k, evaluateConditionals(v)])
       .filter(([, v]) => v !== undefined)
   ) as T;
