@@ -27,5 +27,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npm run build
+      - run: npm run test
+      - run: npm run resume
       - run: gh release create --title "$(TZ=Australia/Sydney date --rfc-3339=s)" --generate-notes "$(date --rfc-3339=s | tr ' :' 'T.')" resume.pdf

@@ -9,9 +9,10 @@
   ],
   "scripts": {
     "clean": "rm -rf dist/",
-    "compile": "npm run clean && esbuild --bundle --platform=node --outfile=dist/index.js src/cli.ts",
-    "build": "npm run compile && node dist/index.js",
-    "test": "jest"
+    "compile": "esbuild --bundle --platform=node --outfile=dist/index.js src/cli.ts",
+    "resume": "node dist/index.js",
+    "test": "jest",
+    "dev": "npm run clean && npm run compile && npm run resume"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
