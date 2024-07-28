@@ -21,10 +21,7 @@ export function SkillGroups({ skillGroups }: Props) {
               </View>
               <View style={styles.skillPips}>
                 {range(5).map((n) => (
-                  <View
-                    key={n}
-                    style={n < skillNum(s.level) ? styles.pipOn : styles.pipOff}
-                  />
+                  <View key={n} style={n < skillNum(s.level) ? styles.pipOn : styles.pipOff} />
                 ))}
               </View>
             </View>

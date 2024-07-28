@@ -11,6 +11,10 @@ export const render = async (resumeFile: string, outputFile: string) => {
     fs.readFile(resumeFile, (err, data) => (err ? f(err) : s(data.toString())));
   });
   const yaml: model.Resume = parse(await readPromise);
-  const clean = evaluateConditionals(yaml)!;
+  const clean = evaluateConditionals(yaml);
+  if (clean == null) {
+    process.stdout.write('No resume data provided.');
+    process.exit(1);
+  }
   await ReactPDF.renderToFile(<Resume data={clean} />, outputFile);
 };

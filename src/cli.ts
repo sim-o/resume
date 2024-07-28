@@ -11,5 +11,5 @@ const program = new Command()
 program.parse();
 const options = program.opts();
 render(options.resume, options.outputFile).then(() => {
-  console.log('Completed.');
+  process.stdout.write('Completed.\n');
 });

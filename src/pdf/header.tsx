@@ -38,12 +38,7 @@ export function Header({ basics }: Props) {
               },
             ]}
           >
-            {p.icon && (
-              <Image
-                src={p.icon}
-                style={{ height: 10, aspectRatio: 1, marginRight: 4 }}
-              />
-            )}
+            {p.icon && <Image src={p.icon} style={{ height: 10, aspectRatio: 1, marginRight: 4 }} />}
             <Text>{p.network}</Text>
           </Link>
         ))}
