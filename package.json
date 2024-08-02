@@ -14,6 +14,7 @@
     "resume": "node dist/index.js",
     "test": "jest",
     "dev": "npm run clean && npm run compile && npm run resume",
+    "dev:spring": "npm run clean && npm run compile && SPRING=true npm run resume",
     "prettier": "prettier -c src",
     "prettier:fix": "prettier -w src",
     "lint": "eslint src",
