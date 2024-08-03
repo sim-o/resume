@@ -10,11 +10,11 @@
   "scripts": {
     "prepare": "husky",
     "clean": "rm -rf dist/",
-    "compile": "esbuild --bundle --platform=node --outfile=dist/index.js src/cli.ts",
+    "compile": "esbuild --bundle --packages=external --minify --platform=node --outfile=dist/index.js src/cli.ts",
     "resume": "node dist/index.js",
     "test": "jest",
     "dev": "npm run clean && npm run compile && npm run resume",
-    "dev:spring": "npm run clean && npm run compile && SPRING=true npm run resume",
+    "dev:spring": "npm run clean && npm run compile && SPRING=true npm run resume -- -o resume-spring.pdf",
     "prettier": "prettier -c src",
     "prettier:fix": "prettier -w src",
     "lint": "eslint src",
