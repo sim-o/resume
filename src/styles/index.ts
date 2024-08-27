@@ -4,14 +4,10 @@ import { Font, StyleSheet } from '@react-pdf/renderer';
 Font.registerHyphenationCallback((w) => [w]);
 
 // register fonts
-Font.register({
-  family: 'Lato',
-  src: 'Lato-Regular.ttf',
-  fontWeight: 'normal',
-});
-Font.register({ family: 'Lato', src: 'Lato-Light.ttf', fontWeight: 'light' });
-Font.register({ family: 'Lato', src: 'Lato-Thin.ttf', fontWeight: 'thin' });
-Font.register({ family: 'Poppins', src: 'Poppins-Regular.ttf' });
+Font.register({ family: 'Lato', src: 'assets/fonts/Lato-Regular.ttf', fontWeight: 'normal' });
+Font.register({ family: 'Lato', src: 'assets/fonts/Lato-Light.ttf', fontWeight: 'light' });
+Font.register({ family: 'Lato', src: 'assets/fonts/Lato-Thin.ttf', fontWeight: 'thin' });
+Font.register({ family: 'Poppins', src: 'assets/fonts/Poppins-Regular.ttf' });
 
 const mainTextColor = '#39424B';
 
@@ -34,7 +30,7 @@ export const styles = StyleSheet.create({
     flex: 1.6,
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
-    paddingRight: 50,
+    paddingRight: 40,
   },
   portraitImage: {
     aspectRatio: 1,
@@ -44,7 +40,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 4,
     margin: 12,
-    marginLeft: 0,
+    // marginLeft: 10,
   },
   name: {
     fontSize: 18,
@@ -99,6 +95,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     marginLeft: 8,
+    marginTop: 2,
   },
   pipOn: {
     height: 4,

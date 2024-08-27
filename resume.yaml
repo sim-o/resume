@@ -1,7 +1,7 @@
 basics:
   name: Simon Kerle
   label: Software Engineer
-  picture: portrait.png
+#  picture: portrait.png
   email: s.kerle@gmail.com
   phone: 0412 139 846
   summary: I am a full stack developer and consultant with more than 18 years of experience across a varied range of technologies. I’ve had the pleasure to be part of solving business challenges and generating revenue for several industries such as property, health, online dating, and accounting. I am experienced in agile ways of working including Extreme Programming (XP) and Scrum, combined with a dev-ops model. As well as delivering successful products, I am experienced at coaching and leading teams of software engineers.
@@ -13,6 +13,9 @@ basics:
     - network: LinkedIn
       url: https://www.linkedin.com/in/simon-kerle-70544a9/
       icon: linkedin.png
+    - network: Resume
+      url: https://github.com/sim-o/resume
+      icon: github.png
 
 work:
   - company: VMware Tanzu Labs

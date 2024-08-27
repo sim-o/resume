@@ -8,9 +8,11 @@ type Props = { basics: model.Basics };
 export function Header({ basics }: Props) {
   return (
     <View style={styles.header}>
-      <View style={styles.portrait}>
-        <Image style={styles.portraitImage} src={basics.picture} />
-      </View>
+      {basics.picture && (
+        <View style={styles.portrait}>
+          <Image style={styles.portraitImage} src={basics.picture} />
+        </View>
+      )}
       <View style={styles.headerTitle}>
         <View>
           <Text style={styles.name}>{basics.name}</Text>
