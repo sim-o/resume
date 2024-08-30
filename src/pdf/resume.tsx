@@ -2,7 +2,7 @@ import React from 'react';
 import { Document, Page, Text, View } from '@react-pdf/renderer';
 import * as model from '../model';
 import { styles } from '../styles';
-import { SkillGroups } from './skillGroups';
+import { LeftColumn } from './skillGroups';
 import { WorkList } from './workList';
 import { Header } from './header';
 import { Education } from './education';
@@ -16,7 +16,7 @@ export function Resume({ data }: Props) {
       <Page size="A4" style={styles.page}>
         <Header basics={data.basics} />
         <View style={styles.main}>
-          <SkillGroups skillGroups={data.skillGroups} />
+          <LeftColumn skillGroups={data.skillGroups} basics={data.basics} />
           <View style={styles.mainColumn}>
             <View style={styles.basicSummary}>
               <Heading>Summary</Heading>

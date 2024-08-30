@@ -6,11 +6,11 @@ type Props = { children: React.ReactNode };
 export function Dot({ children }: Props) {
   return (
     <View style={[styles.dotContainer]}>
-      <View style={styles.dot}>
-        <Text>-</Text>
-      </View>
       <View style={styles.dotText}>
-        <Text>{children}</Text>
+        <Text>
+          <Text style={styles.dot}>- </Text>
+          {children}
+        </Text>
       </View>
     </View>
   );

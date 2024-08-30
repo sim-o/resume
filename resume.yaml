@@ -1,10 +1,10 @@
 basics:
   name: Simon Kerle
   label: Software Engineer
-#  picture: portrait.png
+  #  picture: portrait.png
   email: s.kerle@gmail.com
   phone: 0412 139 846
-  summary: I am a full stack developer and consultant with more than 18 years of experience across a varied range of technologies. I’ve had the pleasure to be part of solving business challenges and generating revenue for several industries such as property, health, online dating, and accounting. I am experienced in agile ways of working including Extreme Programming (XP) and Scrum, combined with a dev-ops model. As well as delivering successful products, I am experienced at coaching and leading teams of software engineers.
+  summary: I am a full stack developer with more than 18 years of experience across a varied range of technologies. I’ve had the pleasure to be part of solving business challenges and generating revenue for several industries such as property, health, online dating, and accounting. I am experienced in agile ways of working including Extreme Programming (XP) and Scrum, combined with a dev-ops model. As well as delivering successful products, I am experienced at coaching and leading teams of software engineers.
   location:
     city: Glebe
     postalCode: '2037'
@@ -13,7 +13,7 @@ basics:
     - network: LinkedIn
       url: https://www.linkedin.com/in/simon-kerle-70544a9/
       icon: linkedin.png
-    - network: Resume
+    - network: Resume source
       url: https://github.com/sim-o/resume
       icon: github.png
 
@@ -64,7 +64,7 @@ work:
       - Using observability tools such as Splunk and tracing tools to understand and resolve issues affecting production
       - Optimised the performance of all systems from the client application to the server and database
 
-  - company: RSVP.com.au
+  - company: Fairfax Digital - RSVP.com.au
     position: Senior Developer
     location: Sydney
     startDate: '2008-10-01'
@@ -132,6 +132,8 @@ skillGroups:
       - name: Oracle
         level: Advanced
       - name: MSSQL
+        level: Advanced
+      - name: ElasticSearch
         level: Advanced
   - name: Shell
     skills:

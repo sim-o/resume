@@ -27,23 +27,6 @@ export function Header({ basics }: Props) {
           <Text>{basics.email}</Text>
         </Link>
         <Location location={basics.location} />
-        {basics.profiles.map((p, i) => (
-          <Link
-            key={i}
-            href={p.url}
-            style={[
-              styles.link,
-              {
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-              },
-            ]}
-          >
-            {p.icon && <Image src={p.icon} style={{ height: 10, aspectRatio: 1, marginRight: 4 }} />}
-            <Text>{p.network}</Text>
-          </Link>
-        ))}
       </View>
     </View>
   );

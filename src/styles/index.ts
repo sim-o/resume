@@ -9,7 +9,8 @@ Font.register({ family: 'Lato', src: 'assets/fonts/Lato-Light.ttf', fontWeight: 
 Font.register({ family: 'Lato', src: 'assets/fonts/Lato-Thin.ttf', fontWeight: 'thin' });
 Font.register({ family: 'Poppins', src: 'assets/fonts/Poppins-Regular.ttf' });
 
-const mainTextColor = '#39424B';
+const mainTextColour = '#39424B';
+const pipColour = '#90867f';
 
 export const styles = StyleSheet.create({
   page: {
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lato',
     fontSize: 9,
     padding: 30,
-    color: mainTextColor,
+    color: mainTextColour,
   },
   header: {
     flexDirection: 'row',
@@ -51,6 +52,8 @@ export const styles = StyleSheet.create({
   },
   headerInfo: {
     flex: 2,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     textAlign: 'right',
     margin: 12,
   },
@@ -73,14 +76,14 @@ export const styles = StyleSheet.create({
   columnTitleUnderline: {
     height: 0.5,
     width: 40,
-    backgroundColor: mainTextColor,
+    backgroundColor: mainTextColour,
     marginTop: 6,
     marginBottom: 8,
   },
 
   skills: {
     flex: 1.6,
-    paddingRight: 40,
+    paddingRight: 30,
   },
   skillGroup: {
     marginBottom: 16,
@@ -98,16 +101,16 @@ export const styles = StyleSheet.create({
     marginTop: 2,
   },
   pipOn: {
-    height: 4,
-    width: 6,
-    backgroundColor: `${mainTextColor}`,
-    border: `1px solid ${mainTextColor}`,
+    height: 3,
+    width: 4,
+    backgroundColor: `${pipColour}`,
+    border: `1px solid ${pipColour}`,
     marginRight: 1,
   },
   pipOff: {
-    height: 4,
-    width: 6,
-    border: `1px solid ${mainTextColor}`,
+    height: 3,
+    width: 4,
+    border: `1px solid ${pipColour}`,
     marginRight: 1,
   },
 
@@ -154,7 +157,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 1,
   },
 
-  link: { color: mainTextColor },
+  link: { color: mainTextColour },
 
   dotContainer: { flexDirection: 'row', marginLeft: 8, marginTop: 2 },
   dot: { marginRight: 2 },
