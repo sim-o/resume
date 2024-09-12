@@ -36,7 +36,7 @@ work:
       - Built and maintained Kubernetes Helm charts
       - Built a patient search API using ElasticSearch with ETL from legacy InterSystems Cache database
       - Facilitated full team engineering shareback meetings
-      - Interviewed engineering hires
+      # - Interviewed engineering hires
       - Provided expertise on issues and solutions to product management and design
       - Provided advice to client management on the progress of the team
       - Provided feedback to my consultancy management on the progress of the team and the relationship with the client
@@ -106,6 +106,7 @@ skillGroups:
       - name: Hibernate
         level: Expert
   - name: Frontend
+    $when: env.FRONTEND
     skills:
       - name: React
         level: Expert
@@ -116,12 +117,14 @@ skillGroups:
       - name: CSS
         level: Expert
   - name: C#
+    $when: env.CSHARP
     skills:
       - name: DotNet Core
         level: Advanced
       - name: Entity Framework
         level: Advanced
   - name: Mobile
+    $when: env.FRONTEND
     skills:
       - name: React Native
         level: Expert
@@ -168,3 +171,13 @@ skillGroups:
         level: Advanced
       - name: DevOps
         level: Advanced
+  - name: Monitoring / Analytics
+    skills:
+      - name: Splunk
+        level: Intermediate
+      - name: Google Analytics
+        level: Intermediate
+      - name: Amplitude
+        level: Intermediate
+      - name: LaunchDarkly
+        level: Intermediate
