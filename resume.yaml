@@ -14,6 +14,7 @@ basics:
       url: https://www.linkedin.com/in/simon-kerle-70544a9/
       icon: linkedin.png
     - network: Resume source
+      $when: env.GITHUB
       url: https://github.com/sim-o/resume
       icon: github.png
 
@@ -30,11 +31,11 @@ work:
 
       Some highlights are:
     highlights:
-      - I led engineering on 3 streams of work and contributed to two others
+      - I rotated through leading engineering on 3 streams of work and contributing to two others
       - Switched between streams regularly and was able to rapidly understand the systems involved and provide engineering leadership
       - Mentored client and consultancy team members in XP, pair programming, and TDD
       - Built and maintained Kubernetes Helm charts
-      - Built a patient search API using ElasticSearch with ETL from legacy InterSystems Cache database
+      - Built a patient search API using ElasticSearch with ETL from legacy database
       - Facilitated full team engineering shareback meetings
       # - Interviewed engineering hires
       - Provided expertise on issues and solutions to product management and design
